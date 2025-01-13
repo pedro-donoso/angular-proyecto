@@ -1,25 +1,51 @@
-.hero-item{
-border: 1px solid black;
-border-radius: 5px;
-padding: 10px;
-display: inline-block;
+.hero-item {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  background-color: yellowgreen;
+  /* Ajusta el ancho según sea necesario */
 
-  .details{
+  .details {
     text-align: center;
   }
 
-  &.hero-villain{
+  &.hero-villain {
     background-color: rebeccapurple;
   }
 
-  .hero-name{
+  .hero-name {
     font-weight: bolder;
     font-size: 1.4rem;
   }
 
-  .hero-powerstats{
+  .hero-powerstats {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    margin-bottom: 10px;
   }
 
+    button {
+      padding: 5px 10px;
+      border: none;
+      border-radius: 3px;
+      background-color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-right: 5px;
+
+      &:hover {
+          background-color: lightgray;
+        }
+
+        &:disabled {
+          background-color: lightgray;
+
+          cursor: not-allowed;
+        }
+
+    }
 }
