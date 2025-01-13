@@ -1,8 +1,13 @@
 <div class="hero-item">
   <div class="image">
-    <img src="https://picsum.photos/300/300" alt="hero-item">
+    <img [src]="hero.image" alt="hero-item" />
   </div>
   <div class="details">
-    <div class="hero-name">{{hero.name}}</div>
+    <div class="hero-name">{{ hero.name }}</div>
+  </div>
+  <div class="hero-powerstats">
+    <span>Intelligence: {{ hero.powerstats.intelligence }}</span>
+    <button>+</button>
+     <button>-</button>
   </div>
 </div>
