@@ -7,7 +7,7 @@
   </div>
   <div class="hero-powerstats">
     <span>Intelligence: {{ hero.powerstats.intelligence }}</span>
-    <button (click)="incrementPowerStat('intelligence')">+</button>
+    <button [disabled]="hero.powerstats.intelligence === 100" (click)="incrementPowerStat('intelligence')">+</button>
      <button (click)="decrementPowerStat('intelligence')">-</button>
   </div>
 </div>
