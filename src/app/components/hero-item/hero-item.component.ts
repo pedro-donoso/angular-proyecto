@@ -21,8 +21,10 @@ export class HeroItemComponent {
     },
     image:
       'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/620-spider-man.jpg',
-    alignment: 'good',
+    alignment: 'bad',
   };
+
+  isHeroVillain = this.hero.alignment === 'bad';
 
   decrementPowerStat(powerstat: PowerStat):void{
     const value = this.hero.powerstats[powerstat];
