@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Hero } from '../../../../shared/interfaces/hero.interface';
+import { Hero, PowerStat } from '../../../../shared/interfaces/hero.interface';
 
 @Component({
   selector: 'app-hero-item',
@@ -23,4 +23,17 @@ export class HeroItemComponent {
       'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/620-spider-man.jpg',
     alignment: 'good',
   };
+
+  decrementPowerStat(powerstat: PowerStat):void{
+    const value = this.hero.powerstats[powerstat];
+    if(value > 0){
+      this.hero.powerstats[powerstat]--;
+    }
+  }
+  incrementPowerStat(powerstat: PowerStat):void{
+    const value = this.hero.powerstats[powerstat];
+    if(value < 100){
+      this.hero.powerstats[powerstat]++;
+    }
+  }
 }
