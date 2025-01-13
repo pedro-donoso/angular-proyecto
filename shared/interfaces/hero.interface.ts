@@ -2,7 +2,7 @@ export interface Hero{
   id: number;
   name: string;
   image: string;
-  alignment: 'good' | 'bad';
+  soul: 'good' | 'bad';
   powerstats: PowerStats;
 }
 

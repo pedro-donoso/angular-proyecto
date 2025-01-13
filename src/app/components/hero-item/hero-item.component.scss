@@ -5,7 +5,7 @@
   display: inline-block;
   width: 200px;
   text-align: center;
-  background-color: yellowgreen;
+  background-color: aquamarine;
   /* Ajusta el ancho según sea necesario */
 
   .details {
@@ -13,7 +13,8 @@
   }
 
   &.hero-villain {
-    background-color: rebeccapurple;
+    background-color: darkslategrey;
+    color: white;
   }
 
   .hero-name {
