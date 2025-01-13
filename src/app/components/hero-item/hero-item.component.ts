@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Hero } from '../../../../shared/interfaces/hero.interface';
 
 @Component({
   selector: 'app-hero-item',
@@ -12,7 +13,7 @@ export class HeroItemComponent {
     name: 'Spider-Man',
     powerstats: {
       intelligence: 90,
-      strenght: 55,
+      strength: 55,
       speed: 67,
       durability: 75,
       power: 74,
