@@ -6,8 +6,14 @@
     <div class="hero-name">{{ hero.name }}</div>
   </div>
   <div class="hero-powerstats">
+    <span>Strength: {{ hero.powerstats.strength }}</span>
+    <button [disabled]="hero.powerstats.strength === 100" (click)="incrementPowerStat('strength')">+</button>
+     <button [disabled]="hero.powerstats.strength === 0" (click)="decrementPowerStat('strength')">-</button>
+  </div>
+
+  <div class="hero-powerstats">
     <span>Intelligence: {{ hero.powerstats.intelligence }}</span>
     <button [disabled]="hero.powerstats.intelligence === 100" (click)="incrementPowerStat('intelligence')">+</button>
-     <button (click)="decrementPowerStat('intelligence')">-</button>
+     <button [disabled]="hero.powerstats.intelligence === 0" (click)="decrementPowerStat('intelligence')">-</button>
   </div>
 </div>
