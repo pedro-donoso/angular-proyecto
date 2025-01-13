@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './hero-item.component.scss',
 })
 export class HeroItemComponent {
-  hero = {
+  hero: Hero = {
     id: 620,
     name: 'Spider-Man',
     powerstats: {
