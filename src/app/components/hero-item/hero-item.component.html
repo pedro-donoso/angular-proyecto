@@ -5,15 +5,43 @@
   <div class="details">
     <div class="hero-name">{{ hero.name }}</div>
   </div>
+
+   <div class="hero-powerstats">
+    <span>Intelligence: {{ hero.powerstats.intelligence }}</span>
+    <button [disabled]="hero.powerstats.intelligence === 100" (click)="incrementPowerStat('intelligence')">+</button>
+     <button [disabled]="hero.powerstats.intelligence === 0" (click)="decrementPowerStat('intelligence')">-</button>
+  </div>
+
   <div class="hero-powerstats">
     <span>Strength: {{ hero.powerstats.strength }}</span>
     <button [disabled]="hero.powerstats.strength === 100" (click)="incrementPowerStat('strength')">+</button>
      <button [disabled]="hero.powerstats.strength === 0" (click)="decrementPowerStat('strength')">-</button>
   </div>
 
-  <div class="hero-powerstats">
-    <span>Intelligence: {{ hero.powerstats.intelligence }}</span>
-    <button [disabled]="hero.powerstats.intelligence === 100" (click)="incrementPowerStat('intelligence')">+</button>
-     <button [disabled]="hero.powerstats.intelligence === 0" (click)="decrementPowerStat('intelligence')">-</button>
+   <div class="hero-powerstats">
+    <span>Speed: {{ hero.powerstats.speed }}</span>
+    <button [disabled]="hero.powerstats.speed === 100" (click)="incrementPowerStat('speed')">+</button>
+     <button [disabled]="hero.powerstats.speed === 0" (click)="decrementPowerStat('speed')">-</button>
   </div>
+
+   <div class="hero-powerstats">
+    <span>Durability: {{ hero.powerstats.durability }}</span>
+    <button [disabled]="hero.powerstats.durability === 100" (click)="incrementPowerStat('durability')">+</button>
+     <button [disabled]="hero.powerstats.durability === 0" (click)="decrementPowerStat('durability')">-</button>
+  </div>
+
+    <div class="hero-powerstats">
+    <span>Power: {{ hero.powerstats.power }}</span>
+    <button [disabled]="hero.powerstats.power === 100" (click)="incrementPowerStat('power')">+</button>
+     <button [disabled]="hero.powerstats.power === 0" (click)="decrementPowerStat('power')">-</button>
+  </div>
+
+    <div class="hero-powerstats">
+    <span>Combat: {{ hero.powerstats.combat }}</span>
+    <button [disabled]="hero.powerstats.combat === 100" (click)="incrementPowerStat('combat')">+</button>
+     <button [disabled]="hero.powerstats.combat === 0" (click)="decrementPowerStat('combat')">-</button>
+  </div>
+
+
+
 </div>
