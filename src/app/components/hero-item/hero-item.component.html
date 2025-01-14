@@ -12,7 +12,7 @@
   @for(powerstat of hero().powerstats | keyvalue; track powerstat.key){
 
   <div class="hero-powerstats">
-    <span>{{ powerstat.key }}: {{ powerstat.value }}</span>
+    <span>{{ powerstat.key | titlecase }}: {{ powerstat.value }}</span>
     <div>
       <button
         [disabled]="powerstat.value === 0"
