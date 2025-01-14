@@ -5,7 +5,7 @@ import { HeroListComponent } from "./components/hero-list/hero-list.component";
 
 @Component({
   selector: 'app-root',
-  imports: [HeroItemComponent, HeroListComponent],
+  imports: [HeroListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -26,21 +26,6 @@ export class HeroListComponent {
       soul: 'good',
     },
     {
-      id: 225,
-      name: 'Doctor Octopus',
-      powerstats: {
-        intelligence: 94,
-        strength: 48,
-        speed: 33,
-        durability: 40,
-        power: 53,
-        combat: 65,
-      },
-      image:
-        'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/70-batman.jpg',
-      soul: 'bad',
-    },
-    {
       id: 70,
       name: 'Batman',
       powerstats: {
@@ -54,6 +39,21 @@ export class HeroListComponent {
       image:
         'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/70-batman.jpg',
       soul: 'good',
-    }
+    },
+    {
+      id: 637,
+      name: 'Steppenwolf',
+      powerstats: {
+        intelligence: 94,
+        strength: 100,
+        speed: 83,
+        durability: 100,
+        power: 100,
+        combat: 100,
+      },
+      image:
+        'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/637-steppenwolf.jpg',
+      soul: 'bad',
+    },
   ];
 }
