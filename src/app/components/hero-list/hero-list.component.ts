@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HeroItemComponent } from "../hero-item/hero-item.component";
+import { Hero } from '../../../../shared/interfaces/hero.interface';
 
 @Component({
   selector: 'app-hero-list',
@@ -22,7 +23,7 @@ export class HeroListComponent {
       },
       image:
         'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/620-spider-man.jpg',
-      alignment: 'good',
+      soul: 'good',
     },
     {
       id: 225,
@@ -37,7 +38,7 @@ export class HeroListComponent {
       },
       image:
         'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/70-batman.jpg',
-      alignment: 'bad',
+      soul: 'bad',
     },
     {
       id: 70,
@@ -52,7 +53,7 @@ export class HeroListComponent {
       },
       image:
         'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/70-batman.jpg',
-      alignment: 'good',
+      soul: 'good',
     }
   ];
 }
