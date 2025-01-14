@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, computed, input } from '@angular/core';
 import { Hero, PowerStat } from '../../../../shared/interfaces/hero.interface';
 
 @Component({
@@ -10,7 +10,7 @@ import { Hero, PowerStat } from '../../../../shared/interfaces/hero.interface';
 export class HeroItemComponent {
   hero = input.required<Hero>();
 
-  isHeroVillain = false; //this.hero().soul === 'bad';
+  isHeroVillain = computed(() => this.hero().soul === 'bad');
 
   decrementPowerStat(powerstat: PowerStat):void{
     const value = this.hero().powerstats[powerstat];

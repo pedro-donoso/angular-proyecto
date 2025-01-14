@@ -26,21 +26,6 @@ export class HeroListComponent {
       soul: 'good',
     },
     {
-      id: 70,
-      name: 'Batman',
-      powerstats: {
-        intelligence: 100,
-        strength: 26,
-        speed: 27,
-        durability: 50,
-        power: 47,
-        combat: 100,
-      },
-      image:
-        'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/70-batman.jpg',
-      soul: 'good',
-    },
-    {
       id: 637,
       name: 'Steppenwolf',
       powerstats: {
@@ -54,6 +39,21 @@ export class HeroListComponent {
       image:
         'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/637-steppenwolf.jpg',
       soul: 'bad',
+    },
+    {
+      id: 70,
+      name: 'Batman',
+      powerstats: {
+        intelligence: 100,
+        strength: 26,
+        speed: 27,
+        durability: 50,
+        power: 47,
+        combat: 100,
+      },
+      image:
+        'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/70-batman.jpg',
+      soul: 'good',
     },
   ];
 }
