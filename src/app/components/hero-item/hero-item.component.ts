@@ -15,6 +15,7 @@ export class HeroItemComponent {
   powerstatsChange = output<HeroPowerstatsChange>();
 
   isHeroVillain = computed(() => this.hero().soul === 'bad');
+powerstat: any;
 
   decrementPowerStat(powerstat: PowerStat):void{
     this.powerstatsChange.emit({hero: this.hero(), powerstat, value: -1});
