@@ -1,3 +1,13 @@
+.hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* Permite que las tarjetas se muevan a la siguiente fila */
+  justify-content: center;
+  /* Centra las tarjetas en el contenedor */
+  gap: 16px;
+  /* Espacio entre las tarjetas */
+}
+
 .hero-item {
   display: flex;
   flex-direction: column;
@@ -5,86 +15,88 @@
   border: 1px solid black;
   border-radius: 5px;
   padding: 10px;
-  display: inline-block;
   text-align: center;
   background-color: aquamarine;
+  width: 200px;
   /* Ajusta el ancho según sea necesario */
+  transition: transform 0.2s;
+  /* Añade una transición suave al hover */
+}
 
-  .hero-item:hover {
-    transform: scale(1.05);
-  }
+.hero-item:hover {
+  transform: scale(1.05);
+}
 
-  .image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
+.image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
 
-  .details {
-    text-align: center;
-  }
+.details {
+  text-align: center;
+}
 
-  &.hero-villain {
-    background-color: darkslategrey;
-    color: white;
-  }
+.hero-villain {
+  background-color: darkslategrey;
+  color: white;
+}
 
-  .hero-name {
-    font-weight: bolder;
-    font-size: 1.4rem;
+.hero-name {
+  font-weight: bolder;
+  font-size: 1.4rem;
+}
+
+.hero-powerstats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.hero-powerstats span {
+  flex: 1;
+}
+
+.hero-powerstats button {
+  margin-left: 8px;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 600px) {
+  .hero-item {
+    padding: 8px;
+    margin: 8px;
+    width: 100%;
+    /* Las tarjetas ocuparán el 100% del ancho en pantallas pequeñas */
   }
 
   .hero-powerstats {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 8px 0;
-  }
-
-  .hero-powerstats span {
-    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .hero-powerstats button {
-    margin-left: 8px;
+    width: 100%;
+    margin-top: 4px;
   }
+}
 
-  /* Media Queries para dispositivos móviles */
-  @media (max-width: 600px) {
-    .hero-item {
-      padding: 8px;
-      margin: 8px;
-    }
+button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 5px;
+}
 
-    .hero-powerstats {
-      flex-direction: column;
-      align-items: flex-start;
-    }
+button:hover {
+  background-color: lightgray;
+}
 
-    .hero-powerstats button {
-      width: 100%;
-      margin-top: 4px;
-    }
-  }
-
-  button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 3px;
-    background-color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-right: 5px;
-
-    &:hover {
-      background-color: lightgray;
-    }
-
-    &:disabled {
-      background-color: lightgray;
-
-      cursor: not-allowed;
-    }
-
-  }
+button:disabled {
+  background-color: lightgray;
+  cursor: not-allowed;
 }
