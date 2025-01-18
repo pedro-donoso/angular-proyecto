@@ -1,0 +1,46 @@
+<div class="hero-container">
+  <div
+  [class]="isHeroVillain() ? 'hero-item hero-villain' : 'hero-item'"
+  class="hero-item"
+>
+  <div class="image">
+    <img [src]="hero().image" alt="hero-item" />
+  </div>
+  <div class="details">
+    <div class="hero-name">{{ hero().name }}
+
+      @if (isHeroVillain()) {
+      🦹
+      }@else {
+      🦸
+      }
+
+    </div>
+  </div>
+
+ <br>
+
+  @for(powerstat of hero().powerstats | keyvalue; track powerstat.key){
+
+  <div class="hero-powerstats">
+    <span>{{ powerstat.key | titlecase }}: {{ powerstat.value }}</span>
+    <div>
+      <button
+        [disabled]="powerstat.value === 0"
+        (click)="decrementPowerStat(powerstat.key)"
+      >
+        -
+      </button>
+      <button
+        [disabled]="powerstat.value === 100"
+        (click)="incrementPowerStat(powerstat.key)"
+      >
+        +
+      </button>
+    </div>
+  </div>
+
+  }
+</div>
+
+</div>
